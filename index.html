@@ -9,22 +9,26 @@
   <!-- Links -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link href="./css/styles.css" rel="stylesheet" />
-
   <!-- scripts -->
   <script src="./js/vendor/angular.min.js"></script>
 
 
 </head>
-<body>
+<body ng-app="SuggestionBox" ng-controller="HomeController">
 
-    <!-- Modules -->
-    <script src="./js/app.js"></script>
+  <div ng-repeat="post in posts">
+    <h1> {{ post.title }} </h1>
+  </div>
 
-    <!-- Controllers -->
-		<script src="./js/controllers/HomeController.js"></script>
+  <!-- Modules -->
+  <script src="./js/app.js"></script>
 
-    <!-- Directives -->
+  <!-- Controllers -->
+	<script src="./js/controllers/HomeController.js"></script>
 
-    <!-- Services -->
+  <!-- Directives -->
+
+  <!-- Services -->
+  <script src="./js/services/suggestions.js"></script>
 </body>
 </html>
