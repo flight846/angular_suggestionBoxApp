@@ -1,8 +1,8 @@
 app.controller('SuggestionController', ['$scope', '$routeParams', 'suggestions', function ($scope, $routeParams, suggestions) {
   $scope.post = suggestions.posts[$routeParams.id];
 
-  $scope.AddComment = function () {
-    
+  $scope.addComment = function () {
+
     // if input empty, don't submit
     if (!$scope.new_comment || $scope.new_comment === '') {
 			return;
@@ -20,6 +20,4 @@ app.controller('SuggestionController', ['$scope', '$routeParams', 'suggestions',
   $scope.upVoteComment = function (comment) {
     comment.upvotes += 1
   }
-  // after submit, clear input
-  $scope.new_comment = '';
 }])
